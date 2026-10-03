@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a problem with battery readings or the island.
+body:
+  - type: markdown
+    attributes:
+      value: "Diagnostics hide identifiers by default. Review device names before sharing; omit serials, Bluetooth addresses and personal paths."
+  - type: input
+    id: version
+    attributes:
+      label: App and Windows version
+      placeholder: "Battery Alerts 0.1.0, Windows 11"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model and connection
+      placeholder: "Mouse model, Bluetooth or USB receiver, iCUE running or closed"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Reviewed diagnostic output (optional)
+      render: json

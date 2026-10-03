@@ -1,0 +1,8 @@
+/target/
+/dist/
+/vendor/
+/artifacts/
+/docs/island-preview.png
+/docs/ui-verification.json
+*.log
+*.pdb

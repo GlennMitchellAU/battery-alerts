@@ -1,0 +1,29 @@
+name: Device compatibility
+description: Report a working device or request support for another device.
+body:
+  - type: markdown
+    attributes:
+      value: "Read docs/compatibility.md first. Vendor/product IDs are useful; device serials and Bluetooth addresses are unnecessary."
+  - type: input
+    id: model
+    attributes:
+      label: Exact device model
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection type
+      options:
+        - Bluetooth
+        - USB wireless receiver
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: What battery information is available?
+      description: Include app/Windows versions, live or cached tray status, USB vendor/product ID if applicable, and whether the manufacturer's app shows a percentage.
+    validations:
+      required: true
